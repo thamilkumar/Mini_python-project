@@ -1,0 +1,20 @@
+#I have executed this project in https://reeborg.ca/reeborg.html?lang=en&mode=python&menu=worlds%2Fmenus%2Freeborg_intro_en.json&name=Maze&url=worlds%2Ftutorial_en%2Fmaze1.json
+this platfrom for better while and define function concept
+
+  #Here is the code
+
+ def for_right():
+    turn_left()
+    turn_left()
+    turn_left()
+ 
+while not at_goal():
+    if right_is_clear():
+        for_right()
+        move()
+    elif front_is_clear():
+        move()
+    else:
+        turn_left()
+        
+  #There is the bug in the program we need to fix by learning upcoming concepts
