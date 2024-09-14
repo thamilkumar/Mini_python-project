@@ -1,0 +1,22 @@
+def angle_ratio(hour,minute):
+  hour = hour % 12 # To convert hours into 12 hrs format
+  minute_angle = minute * 6  #  small hand moves 6 degree for one min
+  hour_angle = (hour * 30) + (minute * 0.5)  #  large hand moves 30 degree for hours and 0.5 min for one hour
+  angle = abs( hour_angle - minute_angle)  # To get angle 
+  angle = min( angle , 360 - angle) # To get minimum angle
+#To find an angle
+  if angle <90:
+    return "Acute Angle"
+  elif angle == 90:
+    return "Right Angle"
+  elif angle < 180:
+    return "Obtuse Angle"
+  elif angle == 180:
+    return "Straight Angle"
+
+hour= int(input("Enter the hour: "))
+minute= int(input("Enter the minute: "))
+
+angle_type_desc = angle_ratio(hour,minute)
+print(angle_type_desc)
+print(f"The {hour}hr and {minute}min comes under: \n\t \"{angle_type_desc}\"")
